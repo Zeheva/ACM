@@ -5,7 +5,7 @@ namespace AMC.BL2.Tests
 {
     public class BLTests
     {
-     
+
         public class CustomerTest
         {
             [Fact]
@@ -23,13 +23,13 @@ namespace AMC.BL2.Tests
             }
 
             [Fact]
-            public void FullNameTestValid2()
+            public void FullNameLastNameEmpty()
             {
                 //Arrange
                 Customer customer = new Customer();
                 customer.FirstName = "Bilbo";
-                customer.LastName = "Baggins";
-                string expected = "Baggins, Bilbo";
+
+                string expected = "Bilbo";
                 //Act
                 string actual = customer.FullName;
                 //Assert
@@ -40,13 +40,36 @@ namespace AMC.BL2.Tests
             {
                 Customer customer = new Customer();
                 customer.LastName = "Baggins";
-                customer.FirstName = "Bilbo";
-                string expected = "Bilbo, Baggins";
+
+                string expected = "Baggins";
 
                 string actual = customer.FullName;
 
                 Assert.Equal(expected, actual);
             }
+
+            [Fact]
+            public void ValidateEmailMissing()
+            {
+                Customer customer = new Customer();
+                customer.LastName = "LastName";
+                var expected = false;
+                var actual = customer.validate();
+                Assert.Equal(expected, actual);
+
+            }
+            [Fact]
+            public void ValidateLastNameMissing()
+            {
+                Customer customer = new Customer();
+                customer.EmailAddress = "test@test.com";
+
+                var expected = false;
+
+                var actual = customer.validate();
+                Assert.Equal(expected, actual);
+            }
+                
         }
     }
 }
