@@ -10,9 +10,9 @@ namespace ACM.BL
 
         }
 
-        public Customer(int customerID)
+        public Customer(int customerId)
         {
-            this.CustomerID = customerID;
+            this.CustomerId = customerId;
         }
         public static int InstanceCount { get; set; }
         
@@ -21,7 +21,7 @@ namespace ACM.BL
         public string FirstName { get; set; }
 
         public string EmailAddress { get; set; }
-        public int CustomerID { get; private set; }
+        public int CustomerId { get; private set; }
 
         public string FullName
         {
@@ -40,7 +40,7 @@ namespace ACM.BL
             }
         }
 
-        public Customer Retrieve(int customerID)
+        public Customer Retrieve(int customerId)
         {
             return new Customer();
         }
