@@ -69,7 +69,22 @@ namespace AMC.BL2.Tests
                 var actual = customer.validate();
                 Assert.Equal(expected, actual);
             }
-                
+
+            [Fact]
+            public void ValidateOrderItemsAreValid()
+            {
+                OrderItem order = new OrderItem();
+                order.ProductId = 4;
+                order.OrderQuantity = 3;
+
+                var expected = false;
+
+                var actual = order.Validate();
+
+                Assert.Equal(expected, actual);
+
+
+            }
         }
     }
 }

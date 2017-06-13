@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACM.BL", "ACM.BL\ACM.BL.csproj", "{F290AF61-9A3E-45F3-8C20-0C13E29A1936}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AMC.BL2.Tests", "AMC.BL2.Tests\AMC.BL2.Tests.csproj", "{20689106-2928-46FE-A8FD-241E15A5B752}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AMC.Tests", "AMC.BL2.Tests\AMC.Tests.csproj", "{20689106-2928-46FE-A8FD-241E15A5B752}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
