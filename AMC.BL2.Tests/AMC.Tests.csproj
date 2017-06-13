@@ -61,6 +61,7 @@
   <ItemGroup>
     <Compile Include="BLTests.cs" />
     <Compile Include="RepositoryTests\CustomerRepositoryTests.cs" />
+    <Compile Include="RepositoryTests\OrderRepositoryTests.cs" />
     <Compile Include="RepositoryTests\ProductRepositoryTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
